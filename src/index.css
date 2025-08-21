@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+
+  body {
+    @apply font-sans antialiased text-gray-900 bg-white;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+
+  .bg-paradise-gradient {
+    background: linear-gradient(135deg, #0ea5e9 0%, #22c55e 50%, #eab308 100%);
+  }
+
+  .bg-ocean-gradient {
+    background: linear-gradient(180deg, #0284c7 0%, #0ea5e9 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #0ea5e9, #22c55e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:from-primary-600 hover:to-primary-700 hover:shadow-lg hover:scale-105 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-primary-600 border-2 border-primary-500 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-primary-50 hover:border-primary-600 hover:shadow-lg hover:scale-105 active:scale-95;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:scale-105 hover:-translate-y-2;
+  }
+
+  .glass-effect {
+    @apply bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20;
+  }
+
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+}
